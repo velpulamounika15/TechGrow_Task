@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 5px;
+      float: right;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+    .first {
+      background-color: aqua;
+      height: 50px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    nav {
+      background-color: black;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav li {
+      margin: 0 20px;
+    }
+    nav li a {
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+    }
+    .second {
+      background-color: rgb(104, 236, 102);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      padding: 40px 0;
+      text-align: center;
+      background-repeat: no-repeat;
+    }
+    .second h2 {
+      font-size: 30px;
+      color: rgb(244, 228, 228);
+      margin-bottom: 20px;
+    }
+    .drop {
+      margin: 20px auto;
+      text-align: center;
+    }
+    select, input {
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    select {
+      background-color: rgb(228, 234, 77);
+    }
+    select:hover {
+      background-color: rgb(240, 193, 106);
+    }
+    input {
+      width: 200px;
+    }
+    .trump {
+      background-color: orange;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .all {
+      background-color: rgb(16, 65, 108);
+      border-radius: 20px;
+      color: white;
+      width: 250px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+    }
+    .all img {
+      height: 80px;
+      width: 100px;
+      margin: 10px auto;
+    }
+    .property {
+      background-color: aqua;
+      /* text-align: center; */
+      /* padding: 10px 0; */
+      
+    }
+    .property h5 {
+      font-size: 50px;
+      text-align: center;
+      color: black;
+    }
+    img{
+        margin: 10px;
+    }
+    .trump1{
+      background-color: rgb(111, 243, 40);
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .all1{
+      background-color:aliceblue;
+      border-radius: 20px;
+      color: rgb(196, 34, 34);
+      width: 350px;
+      padding: 15px;
+      padding-bottom: 10px;
+      /* margin: 10px; */
+      text-align: center;
+    }
+    .choose2{
+       float: right;
+       margin-top: -30px;
+       
+    }
+    .choose{
+      background: linear-gradient(crimson,blue);
+    }
+    .content h1{
+      color: rgb(237, 147, 13);
+    }
+    .content h2{
+      color: rgb(252, 30, 252);
+    }
+
+
+   /* contact page */
+        .contact-container{
+            /* height: 100vh; */
+            width: 100%;
+            background: linear-gradient(white,gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .contact-left{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+        .contact-left-title h2{
+            font-weight: 600;
+            font-size: 40px;
+            color: red;
+            margin-bottom: 5px;
+
+        }
+        .contact-left-title hr{
+            border: none;
+            width: 120px;
+            height: 5px;
+            background-color: blueviolet;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-inputs{
+            width: 400px;
+            height: 50px;
+            padding-left: 20px;
+            color: gray;
+            font-weight: 600;
+            border-radius: 50px;
+            border: none;
+            /* outline: none; */
+        }
+        .contact-inputs:focus{
+            border: 2px solid red;
+        }
+        .contact-inputs::placeholder{
+            color: rgb(224, 75, 11);
+        }
+        textarea{
+            height: 140px;
+            padding-top: 15px;
+            border-radius: 20px;
+            width: 400px;
+        }
+        .contact-left button{
+               display: flex;
+               align-items: center;
+               padding: 15px 30px;
+               font-size: 16px;
+               color: rgb(223, 8, 8);
+               gap: 10px;
+               border-radius: 10px;
+               border: none;
+        }
+
+   
+  </style>
+</head>
+<body>
+  <section class="first">
+    <button><a href="./login.html">Login</a></button>
+    <button><a href="./register.html">Register</a></button>
+  </section>
+  <nav>
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Properties</a></li>
+      <li><a href="">Agent</a></li>
+      <li><a href="">Login/Register</a></li>
+    </ul>
+  </nav>
+  <section class="second">
+    <h2>Let Us</h2>
+    <h2>Guide You Home</h2>
+    <div class="drop">
+      <select>
+        <option value="">Select Type</option>
+        <option value="Apartment">Apartment</option>
+        <option value="Flat">Flat</option>
+        <option value="Building">Building</option>
+        <option value="House">House</option>
+        <option value="Villa">Villa</option>
+        <option value="Office">Office</option>
+      </select>
+      <select>
+        <option value="">Select Status</option>
+        <option value="Rent">Rent</option>
+        <option value="Sell">Sell</option>
+      </select>
+      <input type="text" list="input" placeholder="Enter City">
+      <datalist id="input">
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Vijayawada">Vijayawada</option>
+        <option value="Vizag">Vizag</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Guntur">Guntur</option>
+        <option value="Macherla">Macherla</option>
+        <option value="Sreesailam">Sreesailam</option>
+        <option value="Prakasam">Prakasam</option>
+        <option value="Ongole">Ongole</option>
+      </datalist>
+    </div>
+  </section>
+  
+  <div class="trump">
+    <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: white;">Recent Property</h2>
+    <div class="all">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBAtzda5yLBzadUWZSQqmk5QDX35IHPbeYg&s" alt="">
+      <h2>Selling Services</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+    <div class="all">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBAtzda5yLBzadUWZSQqmk5QDX35IHPbeYg&s" alt="">
+      <h2>Rental Services</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+    <div class="all">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBAtzda5yLBzadUWZSQqmk5QDX35IHPbeYg&s" alt="">
+      <h2>Property Listing</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+    <div class="all">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBAtzda5yLBzadUWZSQqmk5QDX35IHPbeYg&s" alt="">
+      <h2>Legal Investment</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+  </div>
+
+
+  <div class="trump1">
+    <h2 style="width: 100%; text-align: center; margin-bottom: 20px; color: white;">Recent Property</h2>
+    <div class="all1">
+        <img src="https://assets-news.housing.com/news/wp-content/uploads/2020/05/04190400/17-fabulous-bedroom-decor-ideas-FB-1200x700-compressed.jpg" alt="" height="300px"; width="300px";>
+      <h2>The Meridian</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+    <div class="all1">
+      <img src="https://houseandhome.com/wp-content/uploads/2016/10/Best-Bedrooms-Wallpaper-TommySmythe-HH_DE13.jpg" alt="" height="300px"; width="300px";>
+      <h2>The Grand Enclave</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+    <div class="all1">
+        <img src="https://i.pinimg.com/736x/ec/aa/fb/ecaafbce34618ea4098713e643d0220d.jpg" alt="" height="300px"; width="300px";>
+      <h2>Sunset Meadows</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+    <div class="all1">
+        <img src="https://cdn.brookfieldresidential.net/-/media/brp/global/modules/news-and-blog/corporate/how-many-bedrooms-does-your-family-need/mosaic-6-primary-bedroom-in-the-mosaic-portfolio-at-brighton-crossings-in-brighton-co-1189.jpg?rev=a9dfe57422ab43f7adca401a72fbffbf&cx=0.5&cy=0.5" alt="" height="300px"; width="300px";>
+      <h2>Azure Heights</h2>
+      <h3>This is dummy text for filling out spaces. Just some random words.</h3>
+    </div>
+  </div>
+
+<div class="choose">
+    <h1>Why Choose Us</h1>
+    <img  class="choose2" src="https://t3.ftcdn.net/jpg/05/01/89/28/360_F_501892866_14YM3juhXzaSkqEUmSRshyKUlcFqtotR.jpg" alt="" height="300px";width="1200px"; >
+    <div class="content">
+    <h1>Top Rooted</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur
+       adipisicing elit. Voluptates quidem numquam 
+      voluptatum, excepturi aspernatur delectus.
+       Id soluta consectetur dicta ipsam, non corporis .</h2>
+       <h1>Experiance Quality</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur
+       adipisicing elit. Voluptates quidem numquam 
+      voluptatum, excepturi aspernatur delectus.
+       Id soluta consectetur dicta ipsam, non corporis .</h2>
+       <h1>Healthy Environment</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur
+       adipisicing elit. Voluptates quidem numquam 
+      voluptatum, excepturi aspernatur delectus.
+       Id soluta consectetur dicta ipsam, non corporis .</h2>
+      </div>
+      </div>
+      
+      
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST"
+            class="contact-left">
+            <div class="contact-left-title">
+              <h2>contact our real estate manager </h2>
+                <h2>Get In Touch</h2>
+                <h2>buy your house</h2>
+                <hr>
+            </div>
+             
+            <input type="hidden" name="access_key" value="bac72941-9ffa-42f0-b96d-f5a705f8eeb6">
+
+            <input type="text" name="name" placeholder="Enter Your Name:" class="contact-inputs" required>
+            <input type="mail" name="mail" placeholder="Enter Your Mail:" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-input" required></textarea>
+            <button type="submit">Submit</button>
+            
+        </form>
+        <div class="contact-right">
+
+        </div>
+    </div>
+</body>
+</html>
